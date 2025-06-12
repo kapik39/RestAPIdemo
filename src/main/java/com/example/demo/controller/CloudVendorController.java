@@ -34,18 +34,18 @@ public class CloudVendorController {
     }
 
     // Read All CLoud Vendor Details from DB
-    @GetMapping()
+    @GetMapping("/")
     public List<CloudVendor> getAllCloudVendorDetails() {
         return cloudVendorService.getAllCloudVendors();
     }
 
-    @PostMapping
+    @PostMapping("/")
     public String createCloudVendorDetails(@RequestBody CloudVendor cloudVendor) {
         cloudVendorService.createCloudVendor(cloudVendor);
         return "Cloud Vendor Create Successfully";
     }
 
-    @PutMapping
+    @PutMapping("/")
     public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor) {
         cloudVendorService.updateCloudVendor(cloudVendor);
         return "Cloud Vendor Update Successfully";
